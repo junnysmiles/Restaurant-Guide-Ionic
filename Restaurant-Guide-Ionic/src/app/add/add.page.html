@@ -1,9 +1,45 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>add</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-navbar page="Add Restaurant"></app-navbar>
 
-<ion-content>
+<ion-content class="flex-center">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-align-self-center">
+        <form>
+          <ion-item lines="full">
+            <ion-label position="floating">Restaurant Name</ion-label>
+            <ion-input type="text" name="name" [(ngModel)]="name" required></ion-input>
+          </ion-item>
 
+          <ion-item lines="full">
+            <ion-label position="floating">Address</ion-label>
+            <ion-input type="text" name="address" [(ngModel)]="address" required></ion-input>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">Phone Number</ion-label>
+            <ion-input type="phone" name="phone" [(ngModel)]="phone" required></ion-input>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-label position="floating">Description</ion-label>
+            <ion-input type="Description" name="description" [(ngModel)]="description" required></ion-input>
+          </ion-item>
+
+          <ion-row class="ion-margin-top">
+            <ion-col>
+              <ion-button
+                 type="submit"
+                color="success"
+                expand="block"
+                (click)="addRestaurant()"
+                >
+                + Add
+                </ion-button
+              >
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
