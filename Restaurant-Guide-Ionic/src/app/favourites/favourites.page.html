@@ -1,26 +1,26 @@
 <app-navbar page='Restaurants'></app-navbar>
 
 <ion-content [fullscreen]="true">
-  <ion-item style="margin-bottom: 2rem">
+  <ion-item class="search" style="margin-bottom: 2rem">
     <ion-input placeholder="Search..."></ion-input>
   </ion-item>
 
   <ion-list>
     <div *ngFor="let r of restaurants">
-      <ion-card style="width: 100%">
+      <ion-card class="card">
         <ion-item>
           <ion-label>{{r.name}}</ion-label>
         </ion-item>
 
-        <ion-card-content style="padding-top: 0">
-          <div style="display: flex; align-items: center;">
+        <ion-card-content class="rate">
+          <div class="rateDiv">
             <div *ngFor="let i of counter(r.likes)">
               <ion-icon name="heart-circle-outline"></ion-icon>
             </div>
-            <p style="margin-left: 1rem;">{{r.description}}</p>
+            <p class="p">{{r.description}}</p>
           </div>
 
-          <div style="display: flex; justify-content: space-between">
+          <div class="buttons" style="display: flex; justify-content: space-between">
             <div>
               <button class="btn">Directions</button>
               <button class="btn" (click)="remove(r.id)">Remove</button>

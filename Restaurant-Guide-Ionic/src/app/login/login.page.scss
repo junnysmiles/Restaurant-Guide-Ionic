@@ -2,6 +2,17 @@
   margin: 0 5 rem;
 }
 
+.header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
 .btn {
   background: #dbb2ff;
   padding: .7rem 1.4rem;
