@@ -1,9 +1,37 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>favourites</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-navbar page='restaurants'></app-navbar>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-item style="margin-bottom: 2rem">
+    <ion-input placeholder="Search..."></ion-input>
+  </ion-item>
 
+  <ion-list>
+    <div *ngFor="let r of restaurants">
+      <ion-card style="width: 100%">
+        <ion-item>
+          <ion-label>{{r.name}}</ion-label>
+        </ion-item>
+
+        <ion-card-content style="padding-top: 0">
+          <div style="display: flex; align-items: center;">
+            <div *ngFor="let i of counter(r.likes)">
+              <ion-icon name="heart-circle-outline"></ion-icon>
+            </div>
+            <p style="margin-left: 1rem;">{{r.description}}</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between">
+            <div>
+              <button class="btn">Directions</button>
+              <button class="btn" (click)="remove(r.id)">Remove</button>
+            </div>
+
+            <div>
+              <ion-icon (click)="navigate(r)" style="font-size: 30px;" name="git-branch-outline"></ion-icon>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-list>
 </ion-content>
