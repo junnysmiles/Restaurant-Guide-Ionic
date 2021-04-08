@@ -17,7 +17,7 @@ developers: Developer[];
 
   ngOnInit() {
     this.developers = [
-      { id: 101197834, name: 'Jun yan Gan' },
+      { id: 101197834, name: 'Jun Yan Gan' },
       { id: 101208175, name: 'Stefan Maric' },
       { id: 101210892, name: 'Kevin Silva' },
     ];
