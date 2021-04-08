@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>about</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
 
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <div *ngFor="let d of developers">
+      <ion-card style="width: 100%; display: flex; align-items: center">
+        <div style='flex: 4'>
+          <ion-item>
+            <ion-label style="color: #d36277">{{d.id}}</ion-label>
+          </ion-item>
+
+          <ion-card-content style="padding-top: 0; color: #fff">
+            <h1>{{d.name}}</h1>
+          </ion-card-content>
+        </div>
+        <div style='flex: 1'>
+          <ion-icon style='font-size: 4rem;' name="person-circle-outline"></ion-icon>
+        </div>
+      </ion-card>
+    </div>
+  </ion-list>
 </ion-content>
