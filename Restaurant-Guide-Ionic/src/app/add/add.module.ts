@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AddPageRoutingModule } from './add-routing.module';
 
 import { AddPage } from './add.page';
+import { NavbarComponent } from '../components/navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { AddPage } from './add.page';
     IonicModule,
     AddPageRoutingModule
   ],
-  declarations: [AddPage]
+  declarations: [AddPage, NavbarComponent]
 })
 export class AddPageModule {}
