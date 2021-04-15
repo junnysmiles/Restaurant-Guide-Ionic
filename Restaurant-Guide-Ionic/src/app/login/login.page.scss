@@ -10,6 +10,7 @@
 
 .container {
   margin: 0 5 rem;
+  padding-top: -10px;
 }
 
 .header {
@@ -29,9 +30,17 @@
 }
 
 .buttons {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
+  //display: flex;
+  //justify-content: space-around;
+  float: center;
+  margin-left: 640px;
+  padding-top: 60px;
+}
+
+.divider {
+  width: 30px;
+  height: auto;
+  display: inline-block
 }
 
 .btn {
