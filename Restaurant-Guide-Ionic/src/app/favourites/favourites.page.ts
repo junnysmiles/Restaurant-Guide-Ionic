@@ -1,4 +1,4 @@
-import { Component, Inject, forwardRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -9,6 +9,7 @@ interface Restaurant {
   address: string;
   description: string;
 }
+
 @Component({
   selector: 'app-favourites',
   templateUrl: './favourites.page.html',
@@ -60,6 +61,10 @@ export class FavouritesPage implements OnInit {
 
   remove(id: number) {
     this.restaurants = this.restaurants.filter((r) => r.id !== id);
+  }
+
+  direction() {
+    this.router.navigate(["/location"])
   }
 
   navigate(r: Restaurant) {
