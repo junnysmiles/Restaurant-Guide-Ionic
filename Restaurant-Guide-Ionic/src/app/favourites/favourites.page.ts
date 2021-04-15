@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, forwardRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddComponent } from '../add/add.page'
 
 
 interface Restaurant {
@@ -13,12 +14,13 @@ interface Restaurant {
   selector: 'app-favourites',
   templateUrl: './favourites.page.html',
   styleUrls: ['./favourites.page.scss'],
+  providers:[AddComponent]
 })
 export class FavouritesPage implements OnInit {
-  
+
   restaurants: Restaurant[];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, @Inject(forwardRef(() => AddComponent)) private addComponent: AddComponent) {}
 
   ngOnInit() {
     this.restaurants = [
@@ -45,7 +47,7 @@ export class FavouritesPage implements OnInit {
         address: 'address123',
         description: 'Expensive but worth it, servers...',
       },
-      
+
     ];
 
   }
