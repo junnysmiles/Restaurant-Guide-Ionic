@@ -1,7 +1,8 @@
 {
   "name": "Restaurant-Guide-Ionic",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
