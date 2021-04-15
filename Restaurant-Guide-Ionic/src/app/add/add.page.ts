@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { Plugins } from '@capacitor/core'; 
+import { Plugins } from '@capacitor/core';
 
 const {Storage} = Plugins;
 
@@ -37,7 +37,7 @@ export class AddPage implements OnInit {
       key: 'restaurants',
       value: restaurant
     });
-    
+
   }
   async getRestaurant(){
     const restaurants = await Storage.get({key: 'restaurants'});
@@ -48,8 +48,8 @@ export class AddPage implements OnInit {
     const keys = await Storage.keys();
     console.log('Keys: ', keys);
   }
-  
- 
+
+
   async addRestaurant() {
 /*
     this.nativeStorage.setItem('restaurant', {name: this.name, address: this.address, phone: this.phone, description:this.description})
@@ -73,7 +73,7 @@ export class AddPage implements OnInit {
     });
 
     const toast = await this.toastController.create({
-      message: `${this.name} added to the Database`,
+      message: `${this.name} Added to Favourites`,
       duration: 2000,
       position: 'bottom',
       color: "success"
@@ -82,6 +82,6 @@ export class AddPage implements OnInit {
     this.getRestaurant();
     this.getKeys();
     toast.present();
-    
+
   }
 }
