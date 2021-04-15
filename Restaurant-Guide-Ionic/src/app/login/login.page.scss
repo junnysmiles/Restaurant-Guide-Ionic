@@ -36,14 +36,14 @@ ion-input {
 .loginInput {
   border-radius: 10px;
 }
+
 .passInput {
   margin-top: 15px;
   border-radius: 10px;
 }
 
 .buttons {
-  //display: flex;
-  //justify-content: space-around;
+  justify-content: space-around;
   float: center;
   margin-left: 640px;
   padding-top: 60px;
