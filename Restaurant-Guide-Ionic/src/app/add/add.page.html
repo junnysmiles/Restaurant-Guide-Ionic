@@ -13,27 +13,27 @@
     <ion-row>
       <ion-col class="ion-align-self-center">
         <form>
-          <ion-item lines="full">
+          <ion-item class="input" lines="full">
             <ion-label position="floating">Restaurant Name</ion-label>
             <ion-input type="text" name="name" [(ngModel)]="name" required></ion-input>
           </ion-item>
 
-          <ion-item lines="full">
+          <ion-item class="allInput" lines="full">
             <ion-label position="floating">Address</ion-label>
             <ion-input type="text" name="address" [(ngModel)]="address" required></ion-input>
           </ion-item>
 
-          <ion-item lines="full">
+          <ion-item class="allInput" lines="full">
             <ion-label position="floating">Phone Number</ion-label>
             <ion-input type="phone" name="phone" [(ngModel)]="phone" required></ion-input>
           </ion-item>
 
-          <ion-item lines="full">
+          <ion-item class="allInput" lines="full">
             <ion-label position="floating">Description</ion-label>
             <ion-input type="Description" name="description" [(ngModel)]="description" required></ion-input>
           </ion-item>
 
-          <ion-row class="ion-margin-top">
+          <ion-row class="button">
             <ion-col>
               <ion-button
                 type="submit"
