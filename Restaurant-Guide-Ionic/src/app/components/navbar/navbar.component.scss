@@ -1,7 +1,19 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #57214d;
+}
+
 .app-title{
+  font-family: 'Vidaloka' !important;
+  font-size: 28px;
   color: #d36277;
 }
 
 .page {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-family: 'RobotoMedium' !important;
 }
