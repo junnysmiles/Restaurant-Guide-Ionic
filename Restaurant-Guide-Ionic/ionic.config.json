@@ -1,5 +1,7 @@
 {
   "name": "Restaurant-Guide-Ionic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

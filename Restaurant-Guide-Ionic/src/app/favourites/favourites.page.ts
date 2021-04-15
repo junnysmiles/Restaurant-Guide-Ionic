@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 interface Restaurant {
   id: number;
   name: string;
@@ -14,6 +15,7 @@ interface Restaurant {
   styleUrls: ['./favourites.page.scss'],
 })
 export class FavouritesPage implements OnInit {
+  
   restaurants: Restaurant[];
 
   constructor(private router: Router) {}
@@ -43,7 +45,9 @@ export class FavouritesPage implements OnInit {
         address: 'address123',
         description: 'Expensive but worth it, servers...',
       },
+      
     ];
+
   }
 
   debug(r: any) {
