@@ -1,0 +1,59 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar class="topBar"></ion-toolbar>
+  </ion-header>
+
+
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Hungry Man</h1>
+      <img src="../../assets/logo.png" width="115px" class="image"/>
+    </div>
+
+    <div class="login">
+      <ion-item class="firstInput" lines="full">
+        <ion-label position="floating">First Name</ion-label>
+        <ion-input
+          type="text"
+          name="firstname"
+          [(ngModel)]="firstName"
+          required></ion-input>
+      </ion-item>
+      <ion-item class="input" lines="full">
+        <ion-label position="floating">Last Name</ion-label>
+        <ion-input
+          type="text"
+          name="lastname"
+          [(ngModel)]="lastName"
+          required></ion-input>
+      </ion-item>
+      <ion-item class="input" lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required></ion-input>
+      </ion-item>
+      <ion-item class="input" lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          required></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="signupBtn">
+      <button class="btn" (click)="navigate()">Sign Up</button>
+    </div>
+    <div class="inputCont">
+      <p class="text">Already have an account?</p>
+      <div class="divider"></div>
+      <div class="loginBtn">
+        <p style="text-decoration: underline;" (click)="login()">Login</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

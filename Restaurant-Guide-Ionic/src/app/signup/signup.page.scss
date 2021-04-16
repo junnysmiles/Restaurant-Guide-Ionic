@@ -1,0 +1,86 @@
+ion-input {
+  --border-radius:var(2px)
+}
+
+.topBar {
+  --background: #57214d;
+}
+
+.title {
+  font-family: 'Vidaloka' !important;
+  font-size: 55px;
+  color: #cf6679;
+}
+
+.container {
+  margin: 0 5 rem;
+  padding-top: -10px;
+}
+
+.header {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.image {
+  padding-top: 20px;
+}
+
+.login {
+  padding-left: 400px;
+  padding-right: 400px;
+  padding-top: 50px;
+}
+
+.firstInput {
+  border-radius: 10px;
+}
+
+.input {
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.inputCont{
+  margin-top: 5p2x;
+  margin-left: 38px;
+}
+
+.signupBtn {
+  justify-content: center;
+  margin-left: 685px;
+  padding-top: 40px;
+}
+
+.text {
+  margin-left: 570px;
+  margin-top: 25px;
+  margin-right: 10px;
+  float: left;
+}
+
+.loginBtn{
+  margin-top: -11px;
+  margin-left: 10px;
+}
+
+.divider {
+  width: 30px;
+  height: auto;
+  display: inline-block
+
+}
+
+.anotherDivider{
+  margin-left: 5px;
+}
+
+.btn {
+  background: #dbb2ff;
+  padding: .7rem 1.4rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
