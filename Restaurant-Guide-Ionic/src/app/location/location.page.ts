@@ -17,18 +17,24 @@ export class LocationPage implements OnInit {
   markers: any = [
     {
       title: 'GEORGE Restaurant',
+      address: '111C Queen Street East, Toronto, ON, M5C 1S2',
+      likes: 5,
       latitude: '43.6535419818995',
       longitude: '-79.37436111747974',
       description: 'Probably one of the best steaks I have ever eaten. Pricey...'
     },
     {
       title: 'MIKU Toronto',
+      address: '#105 - 10 Bay Street, Toronto, ON, M5J 2R8',
+      likes: 4,
       latitude: '43.64132665558467',
       longitude: '-79.37751214446476',
       description: 'The Wagyu beef is to die for, and the chefs are very personable. Teppanyaki...'
     },
     {
       title: 'Michaels On Simcoe',
+      address: 'C111 - 100 Simcoe Street, Toronto, ON, M5H 3G2',
+      likes: 4,
       latitude: '43.64841438768175',
       longitude: '-79.38672151747988',
       description: 'Expensive but worth it, service is phenomenal. Needs a reservation...'
@@ -50,6 +56,8 @@ export class LocationPage implements OnInit {
       let mapMarker = new google.maps.Marker({
         position: position,
         title: marker.title,
+        address: marker.address,
+        likes: marker.likes,
         latitude: marker.latitude,
         longitude: marker.longitude,
         description: marker.description
@@ -60,12 +68,16 @@ export class LocationPage implements OnInit {
     }
   }
 
+  counter(i: number) {
+    return new Array(i);
+  }
+
   addInfoWindowToMarker(marker) {
     let infoWindowContent = '<div id="content" style="color: #000000">' +
                               '<h2 id="firstHeading" class="firstHeading">' + marker.title + '</h2>' +
-                              '<p>Latitude: ' + marker.latitude + '</p>' +
-                              '<p>Longitude: ' + marker.longitude + '</p>' +
-                              '<p>Descripton: ' + marker.description + '</p>' +
+                              '<p><b>Address: </b>' + marker.address + '</p>' +
+                              '<div><ion-icon name="heart-circle-outline">' + marker.likes + '</ion-icon></div>' +
+                              '<p><b>Descripton: </b>' + marker.description + '</p>' +
                               '<ion-button id="navigate">Navigate</ion-button>' +
                             '</div>';
 
