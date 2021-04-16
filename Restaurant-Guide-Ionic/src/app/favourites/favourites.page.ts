@@ -47,6 +47,22 @@ export class FavouritesPage implements OnInit {
         description: 'Expensive but worth it, service is phenomenal. Needs a reservation...',
       },
 
+      {
+        id: 4,
+        name: 'Chotto Matte Toronto',
+        likes: 4,
+        address: '161 Bay Street, Toronto, ON, M5J 2S1',
+        description: 'Yet another amazing sushi place, it is new and the interior is absolutely...',
+      },
+
+      {
+        id: 5,
+        name: 'King Taps',
+        likes: 3,
+        address: '100 King Street West, Toronto, ON M5X 1E1',
+        description: 'Food is good, but service is not as great. Too many people...',
+      },
+
     ];
 
   }

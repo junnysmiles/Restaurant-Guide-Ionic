@@ -38,7 +38,23 @@ export class LocationPage implements OnInit {
       latitude: '43.64839886114707',
       longitude: '-79.38670005980809',
       description: 'Expensive but worth it, service is phenomenal. Needs a reservation...'
-    }
+    },
+    {
+      title: 'Chotto Matte Toronto',
+      address: '161 Bay Street, Toronto, ON, M5J 2S1',
+      likes: 4,
+      latitude: '43.646555603571876',
+      longitude: '-79.37859774446454',
+      description: 'Yet another amazing sushi place, it is new and the interior is absolutely...'
+    },
+    {
+      title: 'King Taps',
+      address: '100 King Street West, Toronto, ON M5X 1E1',
+      likes: 3,
+      latitude: '43.64878258812655',
+      longitude: '-79.3817449278364',
+      description: 'Food is good, but service is not as great. Too many people...'
+    },
   ];
 
   constructor() { }
