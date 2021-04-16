@@ -9,7 +9,7 @@
 <app-navbar page='Restaurants'></app-navbar>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar></ion-searchbar>
+  <ion-searchbar animated showCancelButton="focus" placeholder="Search Favourites"></ion-searchbar>
 
   <ion-list>
     <div *ngFor="let r of restaurants">
