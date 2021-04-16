@@ -35,8 +35,8 @@ export class LocationPage implements OnInit {
       title: 'Michaels On Simcoe',
       address: 'C111 - 100 Simcoe Street, Toronto, ON, M5H 3G2',
       likes: 4,
-      latitude: '43.64841438768175',
-      longitude: '-79.38672151747988',
+      latitude: '43.64839886114707',
+      longitude: '-79.38670005980809',
       description: 'Expensive but worth it, service is phenomenal. Needs a reservation...'
     }
   ];
@@ -88,6 +88,15 @@ export class LocationPage implements OnInit {
     marker.addListener('click', () => {
       this.closeAllInfoWindows();
       infoWindow.open(this.map, marker);
+
+      google.maps.event.addListenerOnce(infoWindow, 'domready', () => {
+        document.getElementById('navigate').addEventListener('click', () => {
+          console.log('navigate button clickedQ');
+          // code to navigate using google maps app
+          window.open('https://www.google.com/maps/dir/?api=1&destination=' + marker.latitude + ',' + marker.longitude);
+        });
+      });
+
     });
     this.infoWindows.push(infoWindow);
   }
