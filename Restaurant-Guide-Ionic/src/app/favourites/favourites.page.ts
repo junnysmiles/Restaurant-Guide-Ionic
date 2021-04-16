@@ -25,26 +25,26 @@ export class FavouritesPage implements OnInit {
     this.restaurants = [
       {
         id: 1,
-        name: 'Mongolian Hot Pot',
-        likes: 3,
-        address: 'address123',
-        description: 'I love this pace, dont forget about ...',
+        name: 'GEORGE Restaurant',
+        likes: 5,
+        address: '111C Queen Street East, Toronto, ON, M5C 1S2',
+        description: 'Probably one of the best steaks I have ever eaten. Pricey...',
       },
 
       {
         id: 2,
-        name: 'Korean BBQ',
-        likes: 5,
-        address: 'address123',
-        description: 'The Waguy beef is to die for...',
+        name: 'MIKU Toronto',
+        likes: 4,
+        address: '#105 - 10 Bay Street, Toronto, ON, M5J 2R8',
+        description: 'The Wagyu beef is to die for, and the chefs are very personable. Teppanyaki...',
       },
 
       {
         id: 3,
-        name: 'Sushi Teppanyaki',
+        name: 'Michaels On Simcoe',
         likes: 4,
-        address: 'address123',
-        description: 'Expensive but worth it, servers...',
+        address: 'C111 - 100 Simcoe Street, Toronto, ON, M5H 3G2',
+        description: 'Expensive but worth it, service is phenomenal. Needs a reservation...',
       },
 
     ];
