@@ -9,10 +9,7 @@
 <app-navbar page='Restaurants'></app-navbar>
 
 <ion-content [fullscreen]="true">
-  <ion-item style="margin-bottom: 2rem">
-    <ion-icon name="search-outline"></ion-icon>
-    <ion-searchbar value="Search"></ion-searchbar>
-  </ion-item>
+  <ion-searchbar></ion-searchbar>
 
   <ion-list>
     <div *ngFor="let r of restaurants">
