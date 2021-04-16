@@ -83,6 +83,10 @@ export class FavouritesPage implements OnInit {
     this.router.navigate(["/location"])
   }
 
+  share() {
+
+  }
+
   navigate(r: Restaurant) {
     this.router.navigate(["/restaurant", r],)
   }
