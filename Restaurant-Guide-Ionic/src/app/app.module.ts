@@ -7,10 +7,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
-import { GoogleMapComponent } from './google-map/google-map.component'
 
 @NgModule({
-  declarations: [AppComponent, GoogleMapComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NativeStorage],
