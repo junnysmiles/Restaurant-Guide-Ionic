@@ -29,7 +29,7 @@ export class SignupPage implements OnInit {
     let isSignedUp = false;
 
     if (this.firstName ==='' || this.lastName ==='' || this.email === '' || this.password === '') {
-      msg = 'Please enter all fields to sign-up';
+      msg = 'Please enter all fields to sign-up.';
     }
     else {
       msg = 'Thank you for signing up!';

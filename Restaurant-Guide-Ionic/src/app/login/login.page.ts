@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
     let isLoggedIn = false;
 
     if (this.email === '' || this.password === '') {
-      msg = 'Login Failed';
+      msg = 'Login Failed.';
     }
     else {
       msg = 'Welcome Back!';

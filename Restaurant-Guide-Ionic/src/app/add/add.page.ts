@@ -56,11 +56,22 @@ export class AddPage implements OnInit {
     this.setObject(JSON.stringify(restaurant.id), restaurant);
     this.readData();
 
+    let msg = ''
+    let allInputFields = false;
+
+    if (this.name ==='' || this.address ==='' || this.phone === '' || this.description === '') {
+      msg = 'Please enter all fields to add to favourites.';
+    }
+    else {
+      msg = `${this.name} Successfully Added to Favourites.`;
+      allInputFields = true;
+    }
+
     const toast = await this.toastController.create({
-      message: `${this.name} Successfully Added to Favourites.`,
+      message: msg,
       duration: 2000,
       position: 'bottom',
-      color: 'success',
+      color: allInputFields ? "success" : "danger",
     });
     toast.present();
   }
