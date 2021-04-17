@@ -5,6 +5,24 @@ import { Plugins } from '@capacitor/core';
 
 const {Storage} = Plugins;
 
+class Restaurant {
+  id: string;
+  type: string;
+  name: string;
+  phone: string;
+  address: string;
+  description: string;
+
+  constructor(name, address, phone, description) {
+    this.id = `${Date.now()}`;
+    this.type = "restaurant";
+    this.name = name;
+    this.address = address;
+    this.phone = phone;
+    this.description = description;
+  }
+}
+
 @Component({
   selector: 'app-add',
   templateUrl: './add.page.html',
@@ -17,6 +35,8 @@ export class AddPage implements OnInit {
   phone: string;
   description: string;
 
+  restaurants = [];
+
   constructor(public toastController: ToastController, public nativeStorage:NativeStorage) {
     this.name = '';
     this.address = '';
@@ -26,62 +46,53 @@ export class AddPage implements OnInit {
 
   ngOnInit() {}
 
-  async setRestaurant(){
-    const restaurant = JSON.stringify([{
-      name: this.name,
-      address: this.address,
-      phone: this.phone,
-      description: this.description
-    }])
-    await Storage.set({
-      key: 'restaurants',
-      value: restaurant
-    });
-
-  }
-  async getRestaurant(){
-    const restaurants = await Storage.get({key: 'restaurants'});
-    console.log(JSON.parse(restaurants.value));
-  }
-
-  async getKeys(){
-    const keys = await Storage.keys();
-    console.log('Keys: ', keys);
-  }
-
-
-  async addRestaurant() {
-/*
-    this.nativeStorage.setItem('restaurant', {name: this.name, address: this.address, phone: this.phone, description:this.description})
-      .then(
-        () => console.log(this.name, this.address, this.phone,this.description),
-        error => console.error('Error storing item',
-        error)
+  async addRestaurant(e: any) {
+    const restaurant = new Restaurant(
+      this.name,
+      this.address,
+      this.phone,
+      this.description
     );
-
-    this.nativeStorage.getItem('restaurant')
-        .then(
-          data => console.log(data),
-          error => console.error(error)
-        );
-*/
-    console.log({
-      name: this.name,
-      address: this.address,
-      phone: this.phone,
-      description: this.description,
-    });
+    this.setObject(JSON.stringify(restaurant.id), restaurant);
+    this.readData();
 
     const toast = await this.toastController.create({
-      message: `${this.name} Added to Favourites`,
+      message: `${this.name} Successfully Added to Favourites.`,
       duration: 2000,
       position: 'bottom',
-      color: "success"
+      color: 'success',
     });
-    this.setRestaurant();
-    this.getRestaurant();
-    this.getKeys();
     toast.present();
-
   }
+
+  async deleteData() {
+    await Storage.clear();
+    this.readData();
+  }
+
+  debug() {
+    console.log('!!', this.restaurants);
+  }
+
+  async setObject(key: string, value: any): Promise<any> {
+    await Storage.set({
+      key,
+      value: JSON.stringify(value),
+    });
+  }
+
+  async readData(): Promise<any> {
+    this.restaurants = [];
+    const { keys } = await Storage.keys();
+    keys.forEach(this.getData, this);
+  }
+
+  async getData( key: string): Promise<any> {
+    const item = await Storage.get({ key });
+    // to debug possibly
+    // console.log(key, item);
+    const r = JSON.parse(item.value);
+    this.restaurants.push(r);
+  }
+
 }
